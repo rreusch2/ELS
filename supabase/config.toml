@@ -1,0 +1,13 @@
+project_id = "bqlfitxelkhmzhpfoibr"
+
+# Public form submission; the function validates input itself.
+[functions.submit-application]
+verify_jwt = false
+
+# Called by Stripe; authenticated via the Stripe signature header.
+[functions.stripe-webhook]
+verify_jwt = false
+
+# Stripe redirects the phone browser here, which sends the user back into the app.
+[functions.checkout-return]
+verify_jwt = false
